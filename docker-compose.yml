@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    container_name: anaconda
+    labels:
+      description: Anaconda Python 3 using Jupyter Notebooks
+      name: jupyter notebook 
+#   restart: always
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./files:/usr/src/notebooks/files
